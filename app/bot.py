@@ -3,7 +3,7 @@ from config import Config
 from time import sleep
 from app.functions import translate
 from telebot.types import Message
-
+print(5)
 bot = telebot.TeleBot(Config.TOKEN, threaded=False, skip_pending=True)
 bot.remove_webhook()
 sleep(1)

@@ -2,6 +2,7 @@ import os
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
+print(6)
 
 
 class Config(object):

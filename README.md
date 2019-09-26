@@ -7,7 +7,7 @@ Corrects selected messages with the wrong layout (eng -> ru / ru -> eng).
 Create and activate a virtual environment
 
 ```commandline
-virtual venv --python=python3.6.3
+virtual venv --python=python3.7
 source venv/bin/activate
 ```
 Install the required modules

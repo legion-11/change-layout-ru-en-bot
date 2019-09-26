@@ -8,6 +8,7 @@ bot = telebot.TeleBot(Config.TOKEN, threaded=False, skip_pending=True)
 bot.remove_webhook()
 sleep(1)
 bot.set_webhook(url=Config.HOST_URL)
+print(Config.HOST_URL)
 
 
 @bot.message_handler(commands=['start'])

@@ -1,8 +1,9 @@
-import telebot
-from config import Config
 from time import sleep
-from app.functions import translate
+import telebot
 from telebot.types import Message
+from config import Config
+from app.functions import translate
+
 
 bot = telebot.TeleBot(Config.TOKEN, threaded=False, skip_pending=True)
 bot.remove_webhook()
@@ -11,7 +12,7 @@ bot.set_webhook(url=Config.HOST_URL)
 
 
 @bot.message_handler(commands=['start'])
-def handle_help(message):
+def handle_help(message: Message):
     text_message = "Привет! Это бот для перевода текста написаного в " \
                    "другой раскладке (с руского на английкий и английского на руский)"
 

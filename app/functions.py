@@ -36,4 +36,3 @@ def translate(message: str) -> str:
         result += letter.upper() if char.isupper() else letter
 
     return result
-

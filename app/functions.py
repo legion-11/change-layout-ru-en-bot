@@ -25,10 +25,10 @@ def translate(message: str) -> str:
 
     """changing layout for each letter in message"""
     for char in message:
-        if char in letters_rus and char not in letters_eng:
+        if char.lower() in letters_rus and char.lower() not in letters_eng:
             lang = 'rus'
 
-        elif char in letters_eng and char not in letters_rus:
+        elif char.lower() in letters_eng and char.lower() not in letters_rus:
             lang = 'eng'
 
         letter = letters_rus.get(char.lower() if char not in conflict else char, char) if lang == 'rus' \

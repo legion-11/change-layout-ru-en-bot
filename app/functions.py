@@ -14,10 +14,10 @@ def translate(message: str) -> str:
 
     """finding of start language"""
     for char in message:
-        if char in letters_rus and char not in letters_eng:
+        if char.lower() in letters_rus and char.lower() not in letters_eng:
             lang = 'rus'
             break
-        elif char in letters_eng and char not in letters_rus:
+        elif char.lower() in letters_eng and char.lower() not in letters_rus:
             lang = 'eng'
             break
     if lang == '':
@@ -36,4 +36,3 @@ def translate(message: str) -> str:
         result += letter.upper() if char.isupper() else letter
 
     return result
-

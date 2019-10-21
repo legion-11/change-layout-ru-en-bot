@@ -21,9 +21,14 @@ def handle_help(message: Message):
 
 @bot.message_handler(commands=["fix"])
 def reply_message(message: Message):
-    print(message.json)
     bot.send_message(message.chat.id,
                      translate(message.reply_to_message.text) if message.reply_to_message else "no message")
+
+
+@bot.message_handler(commands=["swapcase"])
+def reply_message(message: Message):
+    bot.send_message(message.chat.id,
+                     message.reply_to_message.text.swapcase() if message.reply_to_message else "no message")
 
 
 @bot.message_handler(content_types=["text"])
